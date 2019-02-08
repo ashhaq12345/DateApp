@@ -13,9 +13,11 @@ namespace DatingApp.API.Controllers
     public class ValuesController : ControllerBase
     {
         private readonly DataContext context;
-        public ValuesController(DataContext context)
+        private readonly IAuthRepository _repo;
+        public ValuesController(DataContext context, IAuthRepository repo)
         {
             this.context = context;
+            this._repo = repo;
 
         }
         // GET api/values
