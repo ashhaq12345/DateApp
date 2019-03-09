@@ -11,5 +11,7 @@ namespace DatingApp.API.Data
          Task<bool> SaveAll();
          Task<IEnumerable<User>> GetUsers();
          Task<User> GetUser(long id);
+         Task<Photo> GetPhoto(long id);
+         Task<Photo> GetMainPhotoForUser(long userId);
     }
 }
